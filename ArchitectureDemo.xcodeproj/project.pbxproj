@@ -12,6 +12,7 @@
 		BB10A6282167A04000AD1D05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10A6262167A04000AD1D05 /* LaunchScreen.storyboard */; };
 		BB10A6332167A04000AD1D05 /* ArchitectureDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10A6322167A04000AD1D05 /* ArchitectureDemoTests.swift */; };
 		BB10A63E2167A04000AD1D05 /* ArchitectureDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10A63D2167A04000AD1D05 /* ArchitectureDemoUITests.swift */; };
+		BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */; };
 		BBDB4330216E06D90026A87D /* ArchitectureDemoTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBDB432F216E06D90026A87D /* ArchitectureDemoTests-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		BB10A6392167A04000AD1D05 /* ArchitectureDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchitectureDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10A63D2167A04000AD1D05 /* ArchitectureDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureDemoUITests.swift; sourceTree = "<group>"; };
 		BB10A63F2167A04000AD1D05 /* ArchitectureDemoUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArchitectureDemoUITests-Info.plist"; sourceTree = "<group>"; };
+		BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchitectureListViewController.swift; sourceTree = "<group>"; };
 		BBDB432F216E06D90026A87D /* ArchitectureDemoTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ArchitectureDemoTests-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				BB0B4B62216CC075009E904E /* Resources */,
+				BBDB4333216E15660026A87D /* Scenes */,
 				BB0B4B61216CBFD4009E904E /* Supporting Files */,
 				BB10A61D2167A03E00AD1D05 /* AppDelegate.swift */,
 			);
@@ -144,12 +147,28 @@
 			path = ArchitectureDemoUITests;
 			sourceTree = "<group>";
 		};
+		BB91F893216F39DE0088ED3A /* Architecture List */ = {
+			isa = PBXGroup;
+			children = (
+				BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */,
+			);
+			path = "Architecture List";
+			sourceTree = "<group>";
+		};
 		BBDB432E216E06D90026A87D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				BBDB432F216E06D90026A87D /* ArchitectureDemoTests-Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BBDB4333216E15660026A87D /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BB91F893216F39DE0088ED3A /* Architecture List */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */,
 				BB10A61E2167A03E00AD1D05 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
