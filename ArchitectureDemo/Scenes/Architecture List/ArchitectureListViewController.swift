@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-typealias ArchitecturePresentation = (title: String, detail: String)
-
 class ArchitectureListViewController: UITableViewController {
 
     private enum Const {
         static let cellIdentifier = "ArchitectureCell"
     }
+
+    var presenter: ArchitectureListPresentingProtocol!
 
     var architectures: [ArchitecturePresentation] = []
 
@@ -66,7 +66,11 @@ extension ArchitectureListViewController {
 
 extension ArchitectureListViewController {
 
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        #warning ("Will be implemented!")
+    override func tableView(_ tableView: UITableView,
+                            didSelectRowAt indexPath: IndexPath) {
+        guard let type = ArchitectureType(rawValue: indexPath.row) else {
+            return
+        }
+        presenter.selectArchitecture(type: type)
     }
 }
