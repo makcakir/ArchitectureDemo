@@ -8,11 +8,25 @@
 
 import Foundation
 
-class ArchitectureListPresenter { }
+class ArchitectureListPresenter {
+
+    let router: ArchitectureListRoutingProtocol
+
+    init(router: ArchitectureListRoutingProtocol) {
+        self.router = router
+    }
+}
 
 extension ArchitectureListPresenter: ArchitectureListPresentingProtocol {
 
     func selectArchitecture(type: ArchitectureType) {
-        #warning ("Will be implemented!")
+        switch type {
+        case .mvc:
+            router.routeToMvcScreen()
+        case .mvvm:
+            router.routeToMvvmScreen()
+        case .viper:
+            router.routeToViperScreen()
+        }
     }
 }

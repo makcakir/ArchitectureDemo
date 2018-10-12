@@ -19,3 +19,9 @@ enum ArchitectureType: Int {
 protocol ArchitectureListPresentingProtocol {
     func selectArchitecture(type: ArchitectureType)
 }
+
+protocol ArchitectureListRoutingProtocol {
+    func routeToMvcScreen()
+    func routeToMvvmScreen()
+    func routeToViperScreen()
+}

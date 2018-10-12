@@ -12,23 +12,36 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
+
+    var navigationController: UINavigationController?
+
+    open class var shared: AppDelegate {
+        return UIApplication.shared.delegate as! AppDelegate
+    }
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        initWindow()
+        initializeWindow()
+        initializeNavigationController()
+        initializeMainScreen()
         return true
     }
 }
 
 private extension AppDelegate {
     
-    func initWindow() {
+    func initializeWindow() {
         window = UIWindow()
         window?.makeKeyAndVisible()
-        initMainScreen()
+    }
+
+    func initializeNavigationController() {
+        navigationController = UINavigationController()
+        window?.rootViewController = navigationController
     }
     
-    func initMainScreen() {
-        window?.rootViewController = UINavigationController()
+    func initializeMainScreen() {
+        let router = ArchitectureListRouter()
+        router.initializeListScreen()
     }
 }
