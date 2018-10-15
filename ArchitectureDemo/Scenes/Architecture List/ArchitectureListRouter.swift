@@ -13,15 +13,19 @@ class ArchitectureListRouter { }
 
 extension ArchitectureListRouter: ArchitectureListRoutingProtocol {
 
-    func routeToMvcScreen() {
+    func routeToMvcScreen(title: String) {
+        let viewController = MVCFibonacciViewController()
+        viewController.title = title
+
+        let navigationController = AppDelegate.shared.navigationController
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+
+    func routeToMvvmScreen(title: String) {
         #warning ("Will be implemented!")
     }
 
-    func routeToMvvmScreen() {
-        #warning ("Will be implemented!")
-    }
-
-    func routeToViperScreen() {
+    func routeToViperScreen(title: String) {
         #warning ("Will be implemented!")
     }
 }

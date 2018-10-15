@@ -54,9 +54,9 @@ protocol ArchitectureListPresentingProtocol {
 }
 
 protocol ArchitectureListRoutingProtocol {
-    func routeToMvcScreen()
-    func routeToMvvmScreen()
-    func routeToViperScreen()
+    func routeToMvcScreen(title: String)
+    func routeToMvvmScreen(title: String)
+    func routeToViperScreen(title: String)
 }
 
 protocol ArchitectureListViewProtocol: class {

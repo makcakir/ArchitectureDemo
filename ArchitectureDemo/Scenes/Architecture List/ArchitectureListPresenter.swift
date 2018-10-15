@@ -35,11 +35,11 @@ extension ArchitectureListPresenter: ArchitectureListPresentingProtocol {
         interactor.increaseViewCount(type: type)
         switch type {
         case .mvc:
-            router.routeToMvcScreen()
+            router.routeToMvcScreen(title: type.title)
         case .mvvm:
-            router.routeToMvvmScreen()
+            router.routeToMvvmScreen(title: type.title)
         case .viper:
-            router.routeToViperScreen()
+            router.routeToViperScreen(title: type.title)
         }
     }
 }
