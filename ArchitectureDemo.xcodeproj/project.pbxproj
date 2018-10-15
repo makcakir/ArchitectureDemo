@@ -22,6 +22,7 @@
 		BBE8FA872174952900A5E1EC /* FibonacciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA862174952900A5E1EC /* FibonacciViewController.swift */; };
 		BBE8FA8B21749ABB00A5E1EC /* FibonacciViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BBE8FA8A21749ABB00A5E1EC /* FibonacciViewController.xib */; };
 		BBE8FA8F2174AF5D00A5E1EC /* MVCFibonacciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA8E2174AF5D00A5E1EC /* MVCFibonacciViewController.swift */; };
+		BBE8FA932174B2D800A5E1EC /* MVVMFibonacciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA922174B2D800A5E1EC /* MVVMFibonacciViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		BBE8FA862174952900A5E1EC /* FibonacciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FibonacciViewController.swift; sourceTree = "<group>"; };
 		BBE8FA8A21749ABB00A5E1EC /* FibonacciViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FibonacciViewController.xib; sourceTree = "<group>"; };
 		BBE8FA8E2174AF5D00A5E1EC /* MVCFibonacciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVCFibonacciViewController.swift; sourceTree = "<group>"; };
+		BBE8FA922174B2D800A5E1EC /* MVVMFibonacciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMFibonacciViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				BBE8FA8D2174AF4500A5E1EC /* MVC */,
+				BBE8FA912174B2BD00A5E1EC /* MVVM */,
 				BBE8FA862174952900A5E1EC /* FibonacciViewController.swift */,
 				BBE8FA8A21749ABB00A5E1EC /* FibonacciViewController.xib */,
 			);
@@ -217,6 +220,14 @@
 				BBE8FA8E2174AF5D00A5E1EC /* MVCFibonacciViewController.swift */,
 			);
 			path = MVC;
+			sourceTree = "<group>";
+		};
+		BBE8FA912174B2BD00A5E1EC /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				BBE8FA922174B2D800A5E1EC /* MVVMFibonacciViewController.swift */,
+			);
+			path = MVVM;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -356,6 +367,7 @@
 				BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */,
 				BBE8FA8521748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift in Sources */,
 				BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */,
+				BBE8FA932174B2D800A5E1EC /* MVVMFibonacciViewController.swift in Sources */,
 				BBE8FA872174952900A5E1EC /* FibonacciViewController.swift in Sources */,
 				BB10A61E2167A03E00AD1D05 /* AppDelegate.swift in Sources */,
 				BBE8FA8F2174AF5D00A5E1EC /* MVCFibonacciViewController.swift in Sources */,

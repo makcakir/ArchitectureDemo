@@ -22,7 +22,12 @@ extension ArchitectureListRouter: ArchitectureListRoutingProtocol {
     }
 
     func routeToMvvmScreen(title: String) {
-        #warning ("Will be implemented!")
+        let viewController = MVVMFibonacciViewController()
+        viewController.title = title
+        #warning ("Add view model")
+
+        let navigationController = AppDelegate.shared.navigationController
+        navigationController?.pushViewController(viewController, animated: true)
     }
 
     func routeToViperScreen(title: String) {
