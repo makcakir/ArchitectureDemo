@@ -9,17 +9,23 @@
 import Foundation
 
 class ArchitectureListInteractor {
-
+    
+    private let types: [ArchitectureType] = [.mvc, .mvvm, .viper]
+    
     weak var output: ArchitectureListInteractorOutputProtocol?
 }
 
 extension ArchitectureListInteractor: ArchitectureListInteractorInputProtocol {
-
+    
     func prepareArchitectureEntities() {
-        #warning ("Read preview count from user defaults!")
-        let entities: [ArchitectureEntity] = [ArchitectureEntity(type: .mvc, previewCount: 0),
-                                              ArchitectureEntity(type: .mvvm, previewCount: 0),
-                                              ArchitectureEntity(type: .viper, previewCount: 0)]
+        let entities: [ArchitectureEntity] = types.map {
+            ArchitectureEntity(type: $0,
+                               viewCount: UserDefaults.standard.integer(forKey: $0.userDefaultsKey))}
         output?.architectureEntitiesPrepared(entities: entities)
+    }
+    
+    func increaseViewCount(type: ArchitectureType) {
+        let viewCount = UserDefaults.standard.integer(forKey: type.userDefaultsKey)
+        UserDefaults.standard.set(viewCount + 1, forKey: type.userDefaultsKey)
     }
 }

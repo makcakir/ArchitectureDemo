@@ -9,13 +9,13 @@
 import Foundation
 
 class ArchitectureListPresenter {
-    
+
     private let interactor: ArchitectureListInteractorInputProtocol
-    
+
     private let router: ArchitectureListRoutingProtocol
-    
+
     weak var view: ArchitectureListViewProtocol?
-    
+
     init(interactor: ArchitectureListInteractorInputProtocol,
          router: ArchitectureListRoutingProtocol) {
         self.interactor = interactor
@@ -26,12 +26,13 @@ class ArchitectureListPresenter {
 // MARK: - ArchitectureListPresentingProtocol
 
 extension ArchitectureListPresenter: ArchitectureListPresentingProtocol {
-    
+
     func prepareArchitecturePresentations() {
         interactor.prepareArchitectureEntities()
     }
-    
+
     func selectArchitecture(type: ArchitectureType) {
+        interactor.increaseViewCount(type: type)
         switch type {
         case .mvc:
             router.routeToMvcScreen()
@@ -46,11 +47,11 @@ extension ArchitectureListPresenter: ArchitectureListPresentingProtocol {
 // MARK: - ArchitectureListInteractorOutputProtocol
 
 extension ArchitectureListPresenter: ArchitectureListInteractorOutputProtocol {
-    
+
     func architectureEntitiesPrepared(entities: [ArchitectureEntity]) {
         let presentations: [ArchitecturePresentation] = entities.map {
             ArchitecturePresentation(title: $0.type.title,
-                                     detail: String.init(format: "Preview count: %d", $0.previewCount))}
+                                     detail: String.init(format: "Preview count: %d", $0.viewCount))}
         view?.updateArchitecturePresentations(presentations: presentations)
     }
 }

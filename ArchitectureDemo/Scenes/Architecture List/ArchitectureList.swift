@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias ArchitectureEntity = (type: ArchitectureType, previewCount: Int)
+typealias ArchitectureEntity = (type: ArchitectureType, viewCount: Int)
 typealias ArchitecturePresentation = (title: String, detail: String)
 
 enum ArchitectureType: Int {
@@ -26,10 +26,22 @@ enum ArchitectureType: Int {
             return "VIPER"
         }
     }
+
+    var userDefaultsKey: String {
+        switch self {
+        case .mvc:
+            return "com.makcakir.ArchitectureDemo.viewCount.mvc"
+        case .mvvm:
+            return "com.makcakir.ArchitectureDemo.viewCount.mvvm"
+        case .viper:
+            return "com.makcakir.ArchitectureDemo.viewCount.viper"
+        }
+    }
 }
 
 protocol ArchitectureListInteractorInputProtocol {
     func prepareArchitectureEntities()
+    func increaseViewCount(type: ArchitectureType)
 }
 
 protocol ArchitectureListInteractorOutputProtocol: class {
