@@ -8,12 +8,32 @@
 
 import Foundation
 
+typealias ArchitectureEntity = (type: ArchitectureType, previewCount: Int)
 typealias ArchitecturePresentation = (title: String, detail: String)
 
 enum ArchitectureType: Int {
     case mvc
     case mvvm
     case viper
+
+    var title: String {
+        switch self {
+        case .mvc:
+            return "MVC"
+        case .mvvm:
+            return "MVVM"
+        case .viper:
+            return "VIPER"
+        }
+    }
+}
+
+protocol ArchitectureListInteractorInputProtocol {
+    func prepareArchitectureEntities()
+}
+
+protocol ArchitectureListInteractorOutputProtocol: class {
+    func architectureEntitiesPrepared(entities: [ArchitectureEntity])
 }
 
 protocol ArchitectureListPresentingProtocol {

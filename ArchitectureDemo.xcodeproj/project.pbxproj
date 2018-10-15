@@ -17,6 +17,7 @@
 		BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */; };
 		BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */; };
 		BBDB4330216E06D90026A87D /* ArchitectureDemoTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBDB432F216E06D90026A87D /* ArchitectureDemoTests-Info.plist */; };
+		BBE8FA8021746EE200A5E1EC /* ArchitectureListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA7F21746EE200A5E1EC /* ArchitectureListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListPresenter.swift; sourceTree = "<group>"; };
 		BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListRouter.swift; sourceTree = "<group>"; };
 		BBDB432F216E06D90026A87D /* ArchitectureDemoTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ArchitectureDemoTests-Info.plist"; sourceTree = "<group>"; };
+		BBE8FA7F21746EE200A5E1EC /* ArchitectureListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BB3BCF67216F428600BADD1C /* ArchitectureList.swift */,
+				BBE8FA7F21746EE200A5E1EC /* ArchitectureListInteractor.swift */,
 				BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */,
 				BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */,
 				BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */,
@@ -311,6 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBE8FA8021746EE200A5E1EC /* ArchitectureListInteractor.swift in Sources */,
 				BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */,
 				BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */,
 				BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */,

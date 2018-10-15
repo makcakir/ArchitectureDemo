@@ -17,6 +17,8 @@ class ArchitectureListPresenter {
     }
 }
 
+// MARK: - ArchitectureListPresentingProtocol
+
 extension ArchitectureListPresenter: ArchitectureListPresentingProtocol {
 
     func selectArchitecture(type: ArchitectureType) {
@@ -28,5 +30,16 @@ extension ArchitectureListPresenter: ArchitectureListPresentingProtocol {
         case .viper:
             router.routeToViperScreen()
         }
+    }
+}
+
+// MARK: - ArchitectureListInteractorOutputProtocol
+
+extension ArchitectureListPresenter: ArchitectureListInteractorOutputProtocol {
+
+    func architectureEntitiesPrepared(entities: [ArchitectureEntity]) {
+        let presentationList: [ArchitecturePresentation] = entities.map {
+            ArchitecturePresentation(title: $0.type.title,
+                                     detail: String.init(format: "Preview count: %d", $0.previewCount))}
     }
 }
