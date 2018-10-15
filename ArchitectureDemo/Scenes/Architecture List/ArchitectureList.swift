@@ -37,6 +37,7 @@ protocol ArchitectureListInteractorOutputProtocol: class {
 }
 
 protocol ArchitectureListPresentingProtocol {
+    func prepareArchitecturePresentations()
     func selectArchitecture(type: ArchitectureType)
 }
 
@@ -44,4 +45,8 @@ protocol ArchitectureListRoutingProtocol {
     func routeToMvcScreen()
     func routeToMvvmScreen()
     func routeToViperScreen()
+}
+
+protocol ArchitectureListViewProtocol: class {
+    func updateArchitecturePresentations(presentations: [ArchitecturePresentation])
 }

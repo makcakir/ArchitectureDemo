@@ -15,14 +15,15 @@ class ArchitectureListViewController: UITableViewController {
         static let cellIdentifier = "ArchitectureCell"
     }
 
-    var presenter: ArchitectureListPresentingProtocol!
+    var presenter: ArchitectureListPresentingProtocol?
 
-    var architectures: [ArchitecturePresentation] = []
+    private var presentations: [ArchitecturePresentation] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         initializeViews()
+        presenter?.prepareArchitecturePresentations()
     }
 }
 
@@ -36,13 +37,23 @@ private extension ArchitectureListViewController {
     }
 }
 
+// MARK: - ArchitectureListViewProtocol
+
+extension ArchitectureListViewController: ArchitectureListViewProtocol {
+
+    func updateArchitecturePresentations(presentations: [ArchitecturePresentation]) {
+        self.presentations = presentations
+        tableView.reloadData()
+    }
+}
+
 // MARK: - UITableViewDataSource
 
 extension ArchitectureListViewController {
 
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int {
-        return architectures.count
+        return presentations.count
     }
 
     override func tableView(_ tableView: UITableView,
@@ -53,10 +64,10 @@ extension ArchitectureListViewController {
             cell?.accessoryType = .disclosureIndicator
         }
 
-        let architecture = architectures[indexPath.row]
+        let presentation = presentations[indexPath.row]
 
-        cell?.textLabel?.text = architecture.title
-        cell?.detailTextLabel?.text = architecture.detail
+        cell?.textLabel?.text = presentation.title
+        cell?.detailTextLabel?.text = presentation.detail
 
         return cell ?? UITableViewCell()
     }
@@ -71,6 +82,6 @@ extension ArchitectureListViewController {
         guard let type = ArchitectureType(rawValue: indexPath.row) else {
             return
         }
-        presenter.selectArchitecture(type: type)
+        presenter?.selectArchitecture(type: type)
     }
 }
