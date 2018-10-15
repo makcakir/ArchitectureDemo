@@ -31,6 +31,11 @@ extension ArchitectureListRouter: ArchitectureListRoutingProtocol {
     }
 
     func routeToViperScreen(title: String) {
-        #warning ("Will be implemented!")
+        let viewController = VIPERFibonacciViewController()
+        viewController.title = title
+        #warning ("Add VIPER module")
+
+        let navigationController = AppDelegate.shared.navigationController
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
