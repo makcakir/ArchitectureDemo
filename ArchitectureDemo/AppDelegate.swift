@@ -22,7 +22,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         initializeWindow()
-        initializeNavigationController()
         initializeMainScreen()
         return true
     }
@@ -31,17 +30,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 private extension AppDelegate {
     
     func initializeWindow() {
-        window = UIWindow()
-        window?.makeKeyAndVisible()
-    }
-
-    func initializeNavigationController() {
         navigationController = UINavigationController()
+
+        window = UIWindow()
         window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
     }
     
     func initializeMainScreen() {
-        let router = ArchitectureListRouter()
-        router.initializeListScreen()
+        let initializer = ArchitectureDemoInitializer()
+        initializer.initializeDemoScreen()
     }
 }

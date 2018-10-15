@@ -9,20 +9,7 @@
 import Foundation
 import UIKit
 
-class ArchitectureListRouter {
-
-    func initializeListScreen() {
-        let viewController = ArchitectureListViewController()
-        viewController.presenter = ArchitectureListPresenter(router: ArchitectureListRouter())
-        #warning ("Use interactor data!")
-        viewController.architectures = [ArchitecturePresentation(title: "MCV", detail: "qwe"),
-                                        ArchitecturePresentation(title: "MVVM", detail: "asd"),
-                                        ArchitecturePresentation(title: "VIPER", detail: "zxc")]
-
-        let navigationController = AppDelegate.shared.navigationController
-        navigationController?.viewControllers = [viewController]
-    }
-}
+class ArchitectureListRouter { }
 
 extension ArchitectureListRouter: ArchitectureListRoutingProtocol {
 

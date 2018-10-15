@@ -18,6 +18,7 @@
 		BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */; };
 		BBDB4330216E06D90026A87D /* ArchitectureDemoTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBDB432F216E06D90026A87D /* ArchitectureDemoTests-Info.plist */; };
 		BBE8FA8021746EE200A5E1EC /* ArchitectureListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA7F21746EE200A5E1EC /* ArchitectureListInteractor.swift */; };
+		BBE8FA8521748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA8421748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListRouter.swift; sourceTree = "<group>"; };
 		BBDB432F216E06D90026A87D /* ArchitectureDemoTests-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ArchitectureDemoTests-Info.plist"; sourceTree = "<group>"; };
 		BBE8FA7F21746EE200A5E1EC /* ArchitectureListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListInteractor.swift; sourceTree = "<group>"; };
+		BBE8FA8421748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureDemoInitializationProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		BB10A61C2167A03E00AD1D05 /* ArchitectureDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BBE8FA8121748A6800A5E1EC /* Commons */,
 				BB0B4B62216CC075009E904E /* Resources */,
 				BBDB4333216E15660026A87D /* Scenes */,
 				BB0B4B61216CBFD4009E904E /* Supporting Files */,
@@ -181,6 +184,14 @@
 				BB91F893216F39DE0088ED3A /* Architecture List */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BBE8FA8121748A6800A5E1EC /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				BBE8FA8421748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 				BBE8FA8021746EE200A5E1EC /* ArchitectureListInteractor.swift in Sources */,
 				BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */,
 				BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */,
+				BBE8FA8521748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift in Sources */,
 				BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */,
 				BB10A61E2167A03E00AD1D05 /* AppDelegate.swift in Sources */,
 				BB3BCF68216F428600BADD1C /* ArchitectureList.swift in Sources */,
