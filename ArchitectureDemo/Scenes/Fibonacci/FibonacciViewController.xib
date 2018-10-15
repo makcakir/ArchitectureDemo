@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FibonacciViewController" customModule="ArchitectureDemo" customModuleProvider="target">
+            <connections>
+                <outlet property="decreaseButton" destination="Gs7-Tl-tzR" id="RXg-Hh-bf5"/>
+                <outlet property="fibonacciImageView" destination="lZZ-0E-C3x" id="DeX-T9-KGq"/>
+                <outlet property="increaseButton" destination="4yf-7F-6dZ" id="pMq-5e-1uj"/>
+                <outlet property="integerLabel" destination="5DM-8w-tPL" id="Kd7-Rb-mL1"/>
+                <outlet property="view" destination="iN0-l3-epB" id="6Qr-Vd-DiL"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwW-63-OIk">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VHT-6q-M99">
+                            <rect key="frame" x="0.0" y="50" width="375" height="322"/>
+                            <subviews>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fibonacci" translatesAutoresizingMaskIntoConstraints="NO" id="lZZ-0E-C3x">
+                                    <rect key="frame" x="97.5" y="0.0" width="180" height="242"/>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-8w-tPL">
+                                    <rect key="frame" x="187.5" y="267" width="0.0" height="0.0"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gs7-Tl-tzR">
+                                    <rect key="frame" x="80" y="292" width="65" height="30"/>
+                                    <state key="normal" title="Decrease">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="decreaseButtonTapped:" destination="-1" eventType="touchUpInside" id="Hpe-BB-uPJ"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yf-7F-6dZ">
+                                    <rect key="frame" x="233" y="292" width="59" height="30"/>
+                                    <state key="normal" title="Increase">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="increaseButtonTapped:" destination="-1" eventType="touchUpInside" id="24Y-Gy-y5L"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="5DM-8w-tPL" firstAttribute="top" secondItem="lZZ-0E-C3x" secondAttribute="bottom" constant="25" id="7nF-Ez-lgA"/>
+                                <constraint firstItem="4yf-7F-6dZ" firstAttribute="centerY" secondItem="Gs7-Tl-tzR" secondAttribute="centerY" id="F8R-fK-nQA"/>
+                                <constraint firstItem="Gs7-Tl-tzR" firstAttribute="top" secondItem="5DM-8w-tPL" secondAttribute="bottom" constant="25" id="IdM-5T-VO0"/>
+                                <constraint firstItem="5DM-8w-tPL" firstAttribute="centerX" secondItem="VHT-6q-M99" secondAttribute="centerX" id="KfB-VW-c2V"/>
+                                <constraint firstItem="Gs7-Tl-tzR" firstAttribute="centerX" secondItem="VHT-6q-M99" secondAttribute="centerX" constant="-75" id="aVT-x4-64S"/>
+                                <constraint firstItem="4yf-7F-6dZ" firstAttribute="centerX" secondItem="VHT-6q-M99" secondAttribute="centerX" constant="75" id="bc2-Xd-Zq1"/>
+                                <constraint firstItem="lZZ-0E-C3x" firstAttribute="centerX" secondItem="VHT-6q-M99" secondAttribute="centerX" id="c2e-a8-Ngt"/>
+                                <constraint firstAttribute="bottom" secondItem="Gs7-Tl-tzR" secondAttribute="bottom" id="cQH-le-r2H"/>
+                                <constraint firstItem="lZZ-0E-C3x" firstAttribute="top" secondItem="VHT-6q-M99" secondAttribute="top" id="ke5-KB-9Hp"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="VHT-6q-M99" firstAttribute="top" secondItem="IwW-63-OIk" secondAttribute="top" constant="50" id="6Bi-u8-zJc"/>
+                        <constraint firstItem="VHT-6q-M99" firstAttribute="leading" secondItem="IwW-63-OIk" secondAttribute="leading" id="b3F-uO-sfF"/>
+                        <constraint firstAttribute="trailing" secondItem="VHT-6q-M99" secondAttribute="trailing" id="j31-bM-wEP"/>
+                        <constraint firstAttribute="bottom" secondItem="VHT-6q-M99" secondAttribute="bottom" constant="50" id="kc2-gR-vhQ"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="IwW-63-OIk" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0Y7-rW-5gp"/>
+                <constraint firstItem="IwW-63-OIk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="C5F-dY-JYr"/>
+                <constraint firstItem="VHT-6q-M99" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="T4O-0m-X7G"/>
+                <constraint firstItem="IwW-63-OIk" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="arW-Hu-cWb"/>
+                <constraint firstItem="IwW-63-OIk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="hb0-nr-Fvv"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="156" y="75.112443778110944"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="fibonacci" width="180" height="242"/>
+    </resources>
+</document>
