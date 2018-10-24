@@ -15,7 +15,7 @@ protocol ArchitectureDemoInitializationProtocol {
 extension ArchitectureDemoInitializationProtocol {
 
     func initializeDemoScreen() {
-        let interactor = ArchitectureListInteractor()
+        let interactor = ArchitectureListInteractor(architectureTypes: [.mvc, .mvvm, .viper])
 
         let presenter = ArchitectureListPresenter(interactor: interactor,
                                                   router: ArchitectureListRouter())
