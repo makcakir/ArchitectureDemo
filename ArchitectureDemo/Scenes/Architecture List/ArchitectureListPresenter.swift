@@ -50,8 +50,17 @@ extension ArchitectureListPresenter: ArchitectureListInteractorOutputProtocol {
 
     func architectureEntitiesPrepared(entities: [ArchitectureEntity]) {
         let presentations: [ArchitecturePresentation] = entities.map {
-            ArchitecturePresentation(title: $0.type.title,
-                                     detail: String.init(format: "Preview count: %d", $0.viewCount))}
+            var detail = ""
+
+            if $0.viewCount == 0 {
+                detail = "Not viewed yet"
+            } else {
+                let format = $0.viewCount == 1 ? "Viewed %d time" : "Viewed %d times"
+                detail = String(format: format, $0.viewCount)
+            }
+
+            return ArchitecturePresentation(title: $0.type.title,
+                                            detail: detail)}
         view?.updateArchitecturePresentations(presentations: presentations)
     }
 }
