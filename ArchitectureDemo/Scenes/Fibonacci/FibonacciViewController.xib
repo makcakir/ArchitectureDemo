@@ -32,26 +32,23 @@
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="fibonacci" translatesAutoresizingMaskIntoConstraints="NO" id="lZZ-0E-C3x">
                                     <rect key="frame" x="97.5" y="0.0" width="180" height="242"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-8w-tPL">
-                                    <rect key="frame" x="187.5" y="267" width="0.0" height="0.0"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5DM-8w-tPL">
+                                    <rect key="frame" x="97.5" y="267" width="180" height="0.0"/>
+                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gs7-Tl-tzR">
                                     <rect key="frame" x="80" y="292" width="65" height="30"/>
-                                    <state key="normal" title="Decrease">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
+                                    <state key="normal" title="Decrease"/>
                                     <connections>
                                         <action selector="decreaseButtonTapped:" destination="-1" eventType="touchUpInside" id="Hpe-BB-uPJ"/>
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yf-7F-6dZ">
                                     <rect key="frame" x="233" y="292" width="59" height="30"/>
-                                    <state key="normal" title="Increase">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
+                                    <state key="normal" title="Increase"/>
                                     <connections>
                                         <action selector="increaseButtonTapped:" destination="-1" eventType="touchUpInside" id="24Y-Gy-y5L"/>
                                     </connections>
@@ -63,6 +60,7 @@
                                 <constraint firstItem="4yf-7F-6dZ" firstAttribute="centerY" secondItem="Gs7-Tl-tzR" secondAttribute="centerY" id="F8R-fK-nQA"/>
                                 <constraint firstItem="Gs7-Tl-tzR" firstAttribute="top" secondItem="5DM-8w-tPL" secondAttribute="bottom" constant="25" id="IdM-5T-VO0"/>
                                 <constraint firstItem="5DM-8w-tPL" firstAttribute="centerX" secondItem="VHT-6q-M99" secondAttribute="centerX" id="KfB-VW-c2V"/>
+                                <constraint firstItem="5DM-8w-tPL" firstAttribute="width" secondItem="lZZ-0E-C3x" secondAttribute="width" id="Xp5-fz-Sgk"/>
                                 <constraint firstItem="Gs7-Tl-tzR" firstAttribute="centerX" secondItem="VHT-6q-M99" secondAttribute="centerX" constant="-75" id="aVT-x4-64S"/>
                                 <constraint firstItem="4yf-7F-6dZ" firstAttribute="centerX" secondItem="VHT-6q-M99" secondAttribute="centerX" constant="75" id="bc2-Xd-Zq1"/>
                                 <constraint firstItem="lZZ-0E-C3x" firstAttribute="centerX" secondItem="VHT-6q-M99" secondAttribute="centerX" id="c2e-a8-Ngt"/>
