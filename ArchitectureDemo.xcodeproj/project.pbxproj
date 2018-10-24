@@ -12,6 +12,7 @@
 		BB10A6282167A04000AD1D05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10A6262167A04000AD1D05 /* LaunchScreen.storyboard */; };
 		BB10A6332167A04000AD1D05 /* ArchitectureDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10A6322167A04000AD1D05 /* ArchitectureDemoTests.swift */; };
 		BB10A63E2167A04000AD1D05 /* ArchitectureDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10A63D2167A04000AD1D05 /* ArchitectureDemoUITests.swift */; };
+		BB2A81402180A2E900889210 /* Int+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A813F2180A2E900889210 /* Int+Additions.swift */; };
 		BB3BCF68216F428600BADD1C /* ArchitectureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BCF67216F428600BADD1C /* ArchitectureList.swift */; };
 		BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */; };
 		BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */; };
@@ -54,6 +55,7 @@
 		BB10A6392167A04000AD1D05 /* ArchitectureDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArchitectureDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10A63D2167A04000AD1D05 /* ArchitectureDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureDemoUITests.swift; sourceTree = "<group>"; };
 		BB10A63F2167A04000AD1D05 /* ArchitectureDemoUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArchitectureDemoUITests-Info.plist"; sourceTree = "<group>"; };
+		BB2A813F2180A2E900889210 /* Int+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Additions.swift"; sourceTree = "<group>"; };
 		BB3BCF67216F428600BADD1C /* ArchitectureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureList.swift; sourceTree = "<group>"; };
 		BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchitectureListViewController.swift; sourceTree = "<group>"; };
 		BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListPresenter.swift; sourceTree = "<group>"; };
@@ -168,6 +170,14 @@
 			path = ArchitectureDemoUITests;
 			sourceTree = "<group>";
 		};
+		BB2A813E2180A2CE00889210 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				BB2A813F2180A2E900889210 /* Int+Additions.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		BB91F893216F39DE0088ED3A /* Architecture List */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +210,7 @@
 		BBE8FA8121748A6800A5E1EC /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				BB2A813E2180A2CE00889210 /* Extension */,
 				BBE8FA8421748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift */,
 			);
 			path = Commons;
@@ -376,6 +387,7 @@
 				BBE8FA8021746EE200A5E1EC /* ArchitectureListInteractor.swift in Sources */,
 				BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */,
 				BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */,
+				BB2A81402180A2E900889210 /* Int+Additions.swift in Sources */,
 				BBE8FA972174B97200A5E1EC /* VIPERFibonacciViewController.swift in Sources */,
 				BBE8FA8521748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift in Sources */,
 				BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */,

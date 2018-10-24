@@ -44,7 +44,7 @@ class MVCFibonacciViewController: FibonacciViewController {
 private extension MVCFibonacciViewController {
 
     func updateViews() {
-        #warning ("change image view visibility according to fibonacci rule!")
+        fibonacciImageView.isHidden = !counter.isFibonacciNumber()
 
         let numberValue = NSNumber(value: counter)
         integerLabel.text = formatter.string(from: numberValue)?.uppercased()
