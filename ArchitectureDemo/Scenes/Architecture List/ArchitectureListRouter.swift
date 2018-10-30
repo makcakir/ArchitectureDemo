@@ -24,7 +24,7 @@ extension ArchitectureListRouter: ArchitectureListRoutingProtocol {
     func routeToMvvmScreen(title: String) {
         let viewController = MVVMFibonacciViewController()
         viewController.title = title
-        #warning ("Add view model")
+        viewController.viewModel = MVVMFibonacciViewModel()
 
         let navigationController = AppDelegate.shared.navigationController
         navigationController?.pushViewController(viewController, animated: true)
