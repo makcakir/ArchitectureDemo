@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB03F2EF2188421C006F4E11 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB03F2EE2188421C006F4E11 /* UIViewController+Additions.swift */; };
 		BB10A61E2167A03E00AD1D05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10A61D2167A03E00AD1D05 /* AppDelegate.swift */; };
 		BB10A6252167A04000AD1D05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB10A6242167A04000AD1D05 /* Assets.xcassets */; };
 		BB10A6282167A04000AD1D05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10A6262167A04000AD1D05 /* LaunchScreen.storyboard */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BB03F2EE2188421C006F4E11 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
 		BB10A61A2167A03E00AD1D05 /* ArchitectureDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ArchitectureDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10A61D2167A03E00AD1D05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB10A6242167A04000AD1D05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2A813F2180A2E900889210 /* Int+Additions.swift */,
+				BB03F2EE2188421C006F4E11 /* UIViewController+Additions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -387,6 +390,7 @@
 				BBE8FA8021746EE200A5E1EC /* ArchitectureListInteractor.swift in Sources */,
 				BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */,
 				BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */,
+				BB03F2EF2188421C006F4E11 /* UIViewController+Additions.swift in Sources */,
 				BB2A81402180A2E900889210 /* Int+Additions.swift in Sources */,
 				BBE8FA972174B97200A5E1EC /* VIPERFibonacciViewController.swift in Sources */,
 				BBE8FA8521748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift in Sources */,
