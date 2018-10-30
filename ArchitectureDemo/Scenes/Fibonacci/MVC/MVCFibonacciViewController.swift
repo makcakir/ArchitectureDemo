@@ -44,13 +44,31 @@ class MVCFibonacciViewController: FibonacciViewController {
 private extension MVCFibonacciViewController {
 
     func updateViews() {
-        fibonacciImageView.isHidden = !counter.isFibonacciNumber()
-
         let numberValue = NSNumber(value: counter)
-        integerLabel.text = formatter.string(from: numberValue)?.uppercased()
-        integerLabel.textColor = counter % 2 == 0 ? UIColor.yellow : UIColor.red
+        let stringValue = formatter.string(from: numberValue) ?? ""
 
-        decreaseButton.isEnabled = counter > 0
+        if counter.isFibonacciNumber() {
+            fibonacciImageView.isHidden = false
+        } else {
+            fibonacciImageView.isHidden = true
+            let message = String(format: "%@ is not a fibonacci number!",
+                                 stringValue.capitalized)
+            presentWarningAlert(message: message)
+        }
+
+        integerLabel.text = stringValue.uppercased()
+
+        if counter % 2 == 0 {
+            integerLabel.textColor = UIColor.yellow
+        } else {
+            integerLabel.textColor = UIColor.red
+        }
+
+        if counter > 0 {
+            decreaseButton.isEnabled = true
+        } else {
+            decreaseButton.isEnabled = false
+        }
     }
 
     func handleCounterChange() {
