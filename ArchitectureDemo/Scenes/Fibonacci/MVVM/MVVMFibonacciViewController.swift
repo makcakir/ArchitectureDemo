@@ -43,6 +43,9 @@ private extension MVVMFibonacciViewController {
             integerLabel.textColor = presentation.integerLabelColor
             decreaseButton.isEnabled = presentation.decreaseButtonEnabled
         case .alert(let message):
+            guard let message = message else {
+                return
+            }
             presentWarningAlert(message: message)
         }
     }

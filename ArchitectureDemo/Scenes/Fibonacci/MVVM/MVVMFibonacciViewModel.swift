@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 typealias FibonacciPresentation = (imageViewHidden: Bool,
-                                   integerLabelText: String,
+                                   integerLabelText: String?,
                                    integerLabelColor: UIColor,
                                    decreaseButtonEnabled: Bool)
 
@@ -18,11 +18,12 @@ class MVVMFibonacciViewModel {
 
     enum Change {
         case presentation(presentation: FibonacciPresentation)
-        case alert(message: String)
+        case alert(message: String?)
     }
 
-    private enum Const {
+    enum Const {
         static let counterKey = "com.makcakir.ArchitectureDemo.counter.mvvm"
+        static let messageFormat = "%@ is not a fibonacci number!"
     }
 
     private let formatter: NumberFormatter
@@ -52,20 +53,18 @@ class MVVMFibonacciViewModel {
     private func handleCounterChange() {
         let isFibonacci = counter.isFibonacciNumber()
         let numberValue = NSNumber(value: counter)
-        let stringValue = formatter.string(from: numberValue) ?? ""
+        let stringValue = formatter.string(from: numberValue)
         let labelColor = counter % 2 == 0 ? UIColor.yellow : UIColor.red
         let decreaseButtonEnabled = counter > 0
 
         let presentation = FibonacciPresentation(imageViewHidden: !isFibonacci,
-                                                 integerLabelText: stringValue.uppercased(),
+                                                 integerLabelText: stringValue?.uppercased(),
                                                  integerLabelColor: labelColor,
                                                  decreaseButtonEnabled: decreaseButtonEnabled)
         changeHandler?(.presentation(presentation: presentation))
 
-        if !isFibonacci {
-            let message = String(format: "%@ is not a fibonacci number!", stringValue.capitalized)
-            changeHandler?(.alert(message: message))
-        }
+        let message = isFibonacci ? nil : String(format: Const.messageFormat, stringValue?.capitalized ?? "")
+        changeHandler?(.alert(message: message))
 
         UserDefaults.standard.set(counter, forKey: Const.counterKey)
     }
