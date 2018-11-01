@@ -138,8 +138,8 @@
 		BB03F2F421888AAC006F4E11 /* MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				BB03F2F721888B84006F4E11 /* MVVMFibonacciTestView.swift */,
-				BBD79F572189CDA3006C4D0A /* MVVMFibonacciViewModelTests.swift */,
+				BBB9D3AB218B0A8800684F3E /* Helpers */,
+				BBB9D3AC218B0A9F00684F3E /* Tests */,
 			);
 			path = MVVM;
 			sourceTree = "<group>";
@@ -244,10 +244,42 @@
 		BBB9D3A4218AF88600684F3E /* VIPER */ = {
 			isa = PBXGroup;
 			children = (
-				BBB9D3A5218AF8C900684F3E /* VIPERFibonacciInteractorTests.swift */,
-				BBB9D3A9218AF98C00684F3E /* VIPERFibonacciTestPresenter.swift */,
+				BBB9D3AE218B0AD600684F3E /* Helpers */,
+				BBB9D3AD218B0ACF00684F3E /* Tests */,
 			);
 			path = VIPER;
+			sourceTree = "<group>";
+		};
+		BBB9D3AB218B0A8800684F3E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BB03F2F721888B84006F4E11 /* MVVMFibonacciTestView.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BBB9D3AC218B0A9F00684F3E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BBD79F572189CDA3006C4D0A /* MVVMFibonacciViewModelTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BBB9D3AD218B0ACF00684F3E /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				BBB9D3A5218AF8C900684F3E /* VIPERFibonacciInteractorTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		BBB9D3AE218B0AD600684F3E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BBB9D3A9218AF98C00684F3E /* VIPERFibonacciTestPresenter.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		BBDB432E216E06D90026A87D /* Supporting Files */ = {
