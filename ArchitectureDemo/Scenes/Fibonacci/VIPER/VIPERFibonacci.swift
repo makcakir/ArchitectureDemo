@@ -26,5 +26,5 @@ protocol VIPERFibonacciPresentingProtocol {
 
 protocol VIPERFibonacciViewProtocol: class {
     func fibonacciPresentationUpdated(_ presentation: FibonacciPresentation)
-    func alertMessageChanged(_ alertMessage: String)
+    func alertMessageChanged(_ alertMessage: String?)
 }
