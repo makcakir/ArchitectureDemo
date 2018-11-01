@@ -20,7 +20,8 @@ class MVVMFibonacciViewModelTests: XCTestCase {
     }
 
     override func tearDown() {
-        UserDefaults.standard.removeObject(forKey: MVVMFibonacciViewModel.Const.counterKey)
+        UserDefaults.standard.removeObject(forKey:
+            MVVMFibonacciViewModel.Const.counterKey.userDefaultsKeyWith(self))
     }
 
     func testInitialState() {

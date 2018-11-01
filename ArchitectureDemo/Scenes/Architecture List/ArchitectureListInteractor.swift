@@ -10,14 +10,15 @@ import Foundation
 
 class ArchitectureListInteractor {
     
-    private var entities: [ArchitectureEntity]
+    private var entities: [ArchitectureEntity] = []
 
     weak var output: ArchitectureListInteractorOutputProtocol?
 
     init(architectureTypes: [ArchitectureType]) {
         self.entities = architectureTypes.map {
-            ArchitectureEntity(type: $0,
-                               viewCount: UserDefaults.standard.integer(forKey: $0.userDefaultsKey))}
+            let viewCount = UserDefaults.standard.integer(forKey:
+                $0.userDefaultsKey.userDefaultsKeyWith(self))
+            return ArchitectureEntity(type: $0, viewCount: viewCount)}
     }
 }
 
@@ -30,6 +31,6 @@ extension ArchitectureListInteractor: ArchitectureListInteractorInputProtocol {
     func increaseViewCount(type: ArchitectureType) {
         let increasedCount = entities[type.rawValue].viewCount + 1
         entities[type.rawValue] = ArchitectureEntity(type: type, viewCount: increasedCount)
-        UserDefaults.standard.set(increasedCount, forKey: type.userDefaultsKey)
+        UserDefaults.standard.set(increasedCount, forKey: type.userDefaultsKey.userDefaultsKeyWith(self))
     }
 }

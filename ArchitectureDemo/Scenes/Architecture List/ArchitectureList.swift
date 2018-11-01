@@ -30,11 +30,11 @@ enum ArchitectureType: Int {
     var userDefaultsKey: String {
         switch self {
         case .mvc:
-            return "com.makcakir.ArchitectureDemo.viewCount.mvc"
+            return "viewCount.mvc"
         case .mvvm:
-            return "com.makcakir.ArchitectureDemo.viewCount.mvvm"
+            return "viewCount.mvvm"
         case .viper:
-            return "com.makcakir.ArchitectureDemo.viewCount.viper"
+            return "viewCount.viper"
         }
     }
 }

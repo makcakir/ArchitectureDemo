@@ -22,32 +22,36 @@ class MVVMFibonacciViewModel {
     }
 
     enum Const {
-        static let counterKey = "com.makcakir.ArchitectureDemo.counter.mvvm"
+        static let counterKey = "counter.mvvm"
         static let messageFormat = "%@ is not a fibonacci number!"
     }
 
     private let formatter: NumberFormatter
 
-    private var counter: Int
+    private var counter: Int = 0 {
+        didSet {
+            handleCounterChange()
+        }
+    }
 
     var changeHandler: ((Change) -> Void)? {
-        didSet { handleCounterChange() }
+        didSet {
+            handleCounterChange()
+        }
     }
 
     init() {
         formatter = NumberFormatter()
         formatter.numberStyle = .spellOut
-        counter = UserDefaults.standard.integer(forKey: Const.counterKey)
+        counter = UserDefaults.standard.integer(forKey: Const.counterKey.userDefaultsKeyWith(self))
     }
 
     func decreaseCounter() {
         counter -= 1
-        handleCounterChange()
     }
 
     func increaseCounter() {
         counter += 1
-        handleCounterChange()
     }
 
     private func handleCounterChange() {
@@ -66,6 +70,6 @@ class MVVMFibonacciViewModel {
         let message = isFibonacci ? nil : String(format: Const.messageFormat, stringValue?.capitalized ?? "")
         changeHandler?(.alert(message: message))
 
-        UserDefaults.standard.set(counter, forKey: Const.counterKey)
+        UserDefaults.standard.set(counter, forKey: Const.counterKey.userDefaultsKeyWith(self))
     }
 }

@@ -12,7 +12,7 @@ import UIKit
 class MVCFibonacciViewController: FibonacciViewController {
 
     private enum Const {
-        static let counterKey = "com.makcakir.ArchitectureDemo.counter.mvc"
+        static let counterKey = "counter.mvc"
     }
 
     private var counter: Int = 0
@@ -21,7 +21,7 @@ class MVCFibonacciViewController: FibonacciViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        counter = UserDefaults.standard.integer(forKey: Const.counterKey)
+        counter = UserDefaults.standard.integer(forKey: Const.counterKey.userDefaultsKeyWith(self))
         formatter.numberStyle = .spellOut
         updateViews()
     }
@@ -72,7 +72,7 @@ private extension MVCFibonacciViewController {
     }
 
     func handleCounterChange() {
-        UserDefaults.standard.set(counter, forKey: Const.counterKey)
+        UserDefaults.standard.set(counter, forKey: Const.counterKey.userDefaultsKeyWith(self))
         updateViews()
     }
 }

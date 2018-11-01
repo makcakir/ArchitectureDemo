@@ -17,6 +17,8 @@
 		BB10A63E2167A04000AD1D05 /* ArchitectureDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10A63D2167A04000AD1D05 /* ArchitectureDemoUITests.swift */; };
 		BB2A81402180A2E900889210 /* Int+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2A813F2180A2E900889210 /* Int+Additions.swift */; };
 		BB3BCF68216F428600BADD1C /* ArchitectureList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3BCF67216F428600BADD1C /* ArchitectureList.swift */; };
+		BBB9D39C218ACD0C00684F3E /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D39B218ACD0C00684F3E /* String+Additions.swift */; };
+		BBB9D39D218ACF0100684F3E /* String+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D39B218ACD0C00684F3E /* String+Additions.swift */; };
 		BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */; };
 		BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */; };
 		BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */; };
@@ -63,6 +65,7 @@
 		BB10A63F2167A04000AD1D05 /* ArchitectureDemoUITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ArchitectureDemoUITests-Info.plist"; sourceTree = "<group>"; };
 		BB2A813F2180A2E900889210 /* Int+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Additions.swift"; sourceTree = "<group>"; };
 		BB3BCF67216F428600BADD1C /* ArchitectureList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureList.swift; sourceTree = "<group>"; };
+		BBB9D39B218ACD0C00684F3E /* String+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Additions.swift"; sourceTree = "<group>"; };
 		BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchitectureListViewController.swift; sourceTree = "<group>"; };
 		BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListPresenter.swift; sourceTree = "<group>"; };
 		BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListRouter.swift; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				BB2A813F2180A2E900889210 /* Int+Additions.swift */,
+				BBB9D39B218ACD0C00684F3E /* String+Additions.swift */,
 				BB03F2EE2188421C006F4E11 /* UIViewController+Additions.swift */,
 			);
 			path = Extension;
@@ -421,6 +425,7 @@
 			files = (
 				BBE8FA8021746EE200A5E1EC /* ArchitectureListInteractor.swift in Sources */,
 				BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */,
+				BBB9D39C218ACD0C00684F3E /* String+Additions.swift in Sources */,
 				BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */,
 				BB03F2EF2188421C006F4E11 /* UIViewController+Additions.swift in Sources */,
 				BB2A81402180A2E900889210 /* Int+Additions.swift in Sources */,
@@ -442,6 +447,7 @@
 			files = (
 				BB03F2F821888B84006F4E11 /* MVVMFibonacciTestView.swift in Sources */,
 				BBD79F582189CDA3006C4D0A /* MVVMFibonacciViewModelTests.swift in Sources */,
+				BBB9D39D218ACF0100684F3E /* String+Additions.swift in Sources */,
 				BB03F2F921888BB4006F4E11 /* MVVMFibonacciViewModel.swift in Sources */,
 				BB03F2FA21888DFA006F4E11 /* Int+Additions.swift in Sources */,
 			);
