@@ -11,9 +11,9 @@ import Foundation
 class ArchitectureListInteractor {
     
     private var entities: [ArchitectureEntity] = []
-
+    
     weak var output: ArchitectureListInteractorOutputProtocol?
-
+    
     init(architectureTypes: [ArchitectureType]) {
         self.entities = architectureTypes.map {
             let viewCount = UserDefaults.standard.integer(forKey:
@@ -21,6 +21,8 @@ class ArchitectureListInteractor {
             return ArchitectureEntity(type: $0, viewCount: viewCount)}
     }
 }
+
+// MARK: - ArchitectureListInteractorInputProtocol
 
 extension ArchitectureListInteractor: ArchitectureListInteractorInputProtocol {
     
@@ -31,6 +33,7 @@ extension ArchitectureListInteractor: ArchitectureListInteractorInputProtocol {
     func increaseViewCount(type: ArchitectureType) {
         let increasedCount = entities[type.rawValue].viewCount + 1
         entities[type.rawValue] = ArchitectureEntity(type: type, viewCount: increasedCount)
+        output?.architectureEntitiesPrepared(entities: entities)
         UserDefaults.standard.set(increasedCount, forKey: type.userDefaultsKey.userDefaultsKeyWith(self))
     }
 }
