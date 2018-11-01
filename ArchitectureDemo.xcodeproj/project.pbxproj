@@ -26,6 +26,9 @@
 		BBB9D3A7218AF8EB00684F3E /* VIPERFibonacciInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D3A0218AE99700684F3E /* VIPERFibonacciInteractor.swift */; };
 		BBB9D3A8218AF90F00684F3E /* VIPERFibonacci.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D39E218AE7FC00684F3E /* VIPERFibonacci.swift */; };
 		BBB9D3AA218AF98C00684F3E /* VIPERFibonacciTestPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D3A9218AF98C00684F3E /* VIPERFibonacciTestPresenter.swift */; };
+		BBB9D3B0218B0B4800684F3E /* VIPERFibonacciPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D3AF218B0B4800684F3E /* VIPERFibonacciPresenterTests.swift */; };
+		BBB9D3B2218B0B6B00684F3E /* VIPERFibonacciTestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D3B1218B0B6B00684F3E /* VIPERFibonacciTestView.swift */; };
+		BBB9D3B3218B0CEF00684F3E /* VIPERFibonacciPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB9D3A2218AEB0E00684F3E /* VIPERFibonacciPresenter.swift */; };
 		BBD4F6102170BCC100241A74 /* ArchitectureListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */; };
 		BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */; };
 		BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */; };
@@ -78,6 +81,8 @@
 		BBB9D3A2218AEB0E00684F3E /* VIPERFibonacciPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERFibonacciPresenter.swift; sourceTree = "<group>"; };
 		BBB9D3A5218AF8C900684F3E /* VIPERFibonacciInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERFibonacciInteractorTests.swift; sourceTree = "<group>"; };
 		BBB9D3A9218AF98C00684F3E /* VIPERFibonacciTestPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERFibonacciTestPresenter.swift; sourceTree = "<group>"; };
+		BBB9D3AF218B0B4800684F3E /* VIPERFibonacciPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERFibonacciPresenterTests.swift; sourceTree = "<group>"; };
+		BBB9D3B1218B0B6B00684F3E /* VIPERFibonacciTestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VIPERFibonacciTestView.swift; sourceTree = "<group>"; };
 		BBD4F60F2170BCC100241A74 /* ArchitectureListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArchitectureListViewController.swift; sourceTree = "<group>"; };
 		BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListPresenter.swift; sourceTree = "<group>"; };
 		BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchitectureListRouter.swift; sourceTree = "<group>"; };
@@ -270,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				BBB9D3A5218AF8C900684F3E /* VIPERFibonacciInteractorTests.swift */,
+				BBB9D3AF218B0B4800684F3E /* VIPERFibonacciPresenterTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -278,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				BBB9D3A9218AF98C00684F3E /* VIPERFibonacciTestPresenter.swift */,
+				BBB9D3B1218B0B6B00684F3E /* VIPERFibonacciTestView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -505,14 +512,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBB9D3B3218B0CEF00684F3E /* VIPERFibonacciPresenter.swift in Sources */,
 				BBB9D3A6218AF8C900684F3E /* VIPERFibonacciInteractorTests.swift in Sources */,
 				BBB9D3AA218AF98C00684F3E /* VIPERFibonacciTestPresenter.swift in Sources */,
+				BBB9D3B0218B0B4800684F3E /* VIPERFibonacciPresenterTests.swift in Sources */,
 				BB03F2F821888B84006F4E11 /* MVVMFibonacciTestView.swift in Sources */,
 				BBD79F582189CDA3006C4D0A /* MVVMFibonacciViewModelTests.swift in Sources */,
 				BBB9D3A8218AF90F00684F3E /* VIPERFibonacci.swift in Sources */,
 				BBB9D39D218ACF0100684F3E /* String+Additions.swift in Sources */,
 				BBB9D3A7218AF8EB00684F3E /* VIPERFibonacciInteractor.swift in Sources */,
 				BB03F2F921888BB4006F4E11 /* MVVMFibonacciViewModel.swift in Sources */,
+				BBB9D3B2218B0B6B00684F3E /* VIPERFibonacciTestView.swift in Sources */,
 				BB03F2FA21888DFA006F4E11 /* Int+Additions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
