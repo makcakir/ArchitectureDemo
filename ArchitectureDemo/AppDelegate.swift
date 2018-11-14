@@ -32,7 +32,7 @@ private extension AppDelegate {
     func initializeWindow() {
         navigationController = UINavigationController()
 
-        window = UIWindow()
+        window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }
