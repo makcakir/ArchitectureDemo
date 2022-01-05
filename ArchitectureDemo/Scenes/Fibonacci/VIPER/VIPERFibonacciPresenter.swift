@@ -25,6 +25,7 @@ class VIPERFibonacciPresenter {
         self.interactor = interactor
         self.formatter = NumberFormatter()
         self.formatter.numberStyle = .spellOut
+        self.formatter.locale = Locale(identifier: "en")
     }
 }
 

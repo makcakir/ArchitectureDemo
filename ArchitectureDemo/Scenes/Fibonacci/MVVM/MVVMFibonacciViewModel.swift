@@ -43,6 +43,7 @@ class MVVMFibonacciViewModel {
     init() {
         formatter = NumberFormatter()
         formatter.numberStyle = .spellOut
+        formatter.locale = Locale(identifier: "en")
         counter = UserDefaults.standard.integer(forKey: Const.counterKey.userDefaultsKeyWith(self))
     }
 
