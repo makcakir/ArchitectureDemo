@@ -42,7 +42,6 @@
 		BBD4F6122170BEDE00241A74 /* ArchitectureListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6112170BEDE00241A74 /* ArchitectureListPresenter.swift */; };
 		BBD4F6142170C1DF00241A74 /* ArchitectureListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD4F6132170C1DF00241A74 /* ArchitectureListRouter.swift */; };
 		BBD79F582189CDA3006C4D0A /* MVVMFibonacciViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD79F572189CDA3006C4D0A /* MVVMFibonacciViewModelTests.swift */; };
-		BBDB4330216E06D90026A87D /* ArchitectureDemoTests-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BBDB432F216E06D90026A87D /* ArchitectureDemoTests-Info.plist */; };
 		BBE8FA8021746EE200A5E1EC /* ArchitectureListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA7F21746EE200A5E1EC /* ArchitectureListInteractor.swift */; };
 		BBE8FA8521748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA8421748AC500A5E1EC /* ArchitectureDemoInitializationProtocol.swift */; };
 		BBE8FA872174952900A5E1EC /* FibonacciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE8FA862174952900A5E1EC /* FibonacciViewController.swift */; };
@@ -476,13 +475,16 @@
 				TargetAttributes = {
 					BB10A6192167A03E00AD1D05 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1320;
 					};
 					BB10A62D2167A04000AD1D05 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1320;
 						TestTargetID = BB10A6192167A03E00AD1D05;
 					};
 					BB10A6382167A04000AD1D05 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1320;
 						TestTargetID = BB10A6192167A03E00AD1D05;
 					};
 				};
@@ -522,7 +524,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BBDB4330216E06D90026A87D /* ArchitectureDemoTests-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,7 +676,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -730,7 +731,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -752,7 +753,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.makcakir.ArchitectureDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -769,7 +770,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.makcakir.ArchitectureDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -788,7 +789,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.makcakir.ArchitectureDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArchitectureDemo.app/ArchitectureDemo";
 			};
@@ -808,7 +809,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.makcakir.ArchitectureDemoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ArchitectureDemo.app/ArchitectureDemo";
 			};
@@ -827,7 +828,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.makcakir.ArchitectureDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ArchitectureDemo;
 			};
@@ -846,7 +847,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.makcakir.ArchitectureDemoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = ArchitectureDemo;
 			};

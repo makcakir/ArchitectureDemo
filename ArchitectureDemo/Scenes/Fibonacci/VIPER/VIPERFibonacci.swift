@@ -14,7 +14,7 @@ protocol VIPERFibonacciInteractorInputProtocol {
     func increaseCounter()
 }
 
-protocol VIPERFibonacciInteractorOutputProtocol: class {
+protocol VIPERFibonacciInteractorOutputProtocol: AnyObject {
     func counterUpdated(_ counter: Int)
 }
 
@@ -24,7 +24,7 @@ protocol VIPERFibonacciPresentingProtocol {
     func increase()
 }
 
-protocol VIPERFibonacciViewProtocol: class {
+protocol VIPERFibonacciViewProtocol: AnyObject {
     func fibonacciPresentationUpdated(_ presentation: FibonacciPresentation)
     func alertMessageChanged(_ alertMessage: String?)
 }

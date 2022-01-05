@@ -44,7 +44,7 @@ protocol ArchitectureListInteractorInputProtocol {
     func increaseViewCount(type: ArchitectureType)
 }
 
-protocol ArchitectureListInteractorOutputProtocol: class {
+protocol ArchitectureListInteractorOutputProtocol: AnyObject {
     func architectureEntitiesPrepared(entities: [ArchitectureEntity])
 }
 
@@ -59,6 +59,6 @@ protocol ArchitectureListRoutingProtocol {
     func routeToViperScreen(title: String)
 }
 
-protocol ArchitectureListViewProtocol: class {
+protocol ArchitectureListViewProtocol: AnyObject {
     func updateArchitecturePresentations(presentations: [ArchitecturePresentation])
 }
